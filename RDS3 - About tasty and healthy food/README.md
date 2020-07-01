@@ -1,20 +1,20 @@
 # About tasty and healthy food
-### Project description
-≈сть сведени€ о 40 000 ресторанах ≈вропы по данным сайта TripAdvisor.
-### Goals and objectives
-ѕредсказывать рейтинг ресторана на основе имеющихс€ в датасете данных.
-### About dataset
-ƒатасет содержит следующие признаки (переменные):
-1. Restaurant_id Ч идентификационный номер ресторана / сети ресторанов;
-2. City Ч город, в котором находитс€ ресторан;
-3. Cuisine Style Ч кухн€ или кухни, к которым можно отнести блюда, предлагаемые в ресторане;
-4. Ranking Ч место, которое занимает данный ресторан среди всех ресторанов своего города;
-5. Rating Ч рейтинг ресторана по данным TripAdvisor (именно это значение должна будет предсказывать модель);
-6. Price Range Ч диапазон цен в ресторане;
-7. Number of Reviews Ч количество отзывов о ресторане;
-8. Reviews Ч данные о двух отзывах, которые отображаютс€ на сайте ресторана;
-9. URL_TA Ч URL страницы ресторана на TripAdvosor;
-10. ID_TA Ч идентификатор ресторана в базе данных TripAdvisor.
-### Project Stages
-- получение общей информации;
-- .
+**Project Description:** TripAdvisor rating prediction of european restaurants.
+
+**Goal:** To help to estimate rating.
+
+**Objectives:** Create model to predict restaurant rating.
+
+**Dataset Description:** Dataset consists of info of 40 000 restaurants into train set and 10 000 restaurants into test set.
+
+Dataset features:
+1. Restaurant_id Ч identification number of restaurant / restaurant network;
+2. City Ч city where the restaurant is located;
+3. Cuisine Style Ч cuisine or cuisines, which include dishes offered in the restaurant;
+4. Ranking Ч the spot that this restaurant takes among all the restaurants in its city;
+5. Rating Ч restaurant rating according to TripAdvisor (target variable);
+6. Price Range Ч restaurant price range;
+7. Number of Reviews Ч restaurant reviews amount;
+8. Reviews Ч data of two reviews displayed on the restaurant website;
+9. URL_TA Ч restaurant URL page on TripAdvosor;
+10. ID_TA Ч restaurant identifier in TripAdvisor database.
