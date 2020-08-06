@@ -1,6 +1,2 @@
-RDS1 - Millionaire/.ipynb_checkpoints/
-RDS2 - Exploratory data analysis/.ipynb_checkpoints/
-RDS3 - About tasty and healthy food/.ipynb_checkpoints/
-RDS1 - Millionaire/data.csv
-RDS2 - Exploratory data analysis/stud_math.xls
+.gitignore
 stud_math.xls
