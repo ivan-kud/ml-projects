@@ -43,7 +43,7 @@ Dataset features:
 29. absences Ч количество пропущенных зан€тий;
 30. score Ч баллы по госэкзамену по математике.
 
-## About tasty and healthy food
+## Restaurant rating prediction
 **Project Description:** TripAdvisor rating prediction of european restaurants.
 
 **Goal:** To identify restaurants that inflate their ratings.
