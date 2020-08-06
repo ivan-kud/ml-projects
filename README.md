@@ -18,6 +18,7 @@ Dataset features:
 4. address — student residence ('U' - in a city, 'R' - in the country);
 5. famsize — family size ('LE3' - less then 3 people, 'GT3' - greater then 3 people);
 6. Pstatus — parents' cohabitation status ('T' - live together, 'A' - live separately);
+
 ...
 30. score — mathematics exam scores.
 
