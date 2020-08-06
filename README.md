@@ -3,45 +3,23 @@
 Here you can see my projects of DataScience.
 
 ## Exploratory data analysis
-**Project Description:** Вас пригласили поучаствовать в одном из проектов UNICEF — международного подразделения ООН, чья миссия состоит в повышении уровня благополучия детей по всему миру.
+**Project Description:** You have been invited to participate in one of the projects of UNICEF - an international subdivision of the United Nations whose mission is to improve the well-being of children around the world.
 
-**Goal:** Отследить влияние условий жизни учеников школы в возрасте от 15 до 22 лет на их успеваемость по математике, чтобы на ранней стадии выявлять учеников, находящихся в группе риска.
+**Goal:** To track the impact of the living conditions of schoolchildren aged 15 to 22 on their math performance to identify students at risk at an early stage.
 
-**Objectives:** Построить модель, которая предсказывала бы результат госэкзамена по математике для каждого ученика.
+**Objectives:** To do an exploratory data analysis of dataset.
 
 **Dataset Description:** 
 
 Dataset features:
-1. school — аббревиатура школы, в которой учится ученик;
-2. sex — пол ученика ('M' - мужской, 'F' - женский);
-3. age — возраст ученика (от 15 до 22 лет);
-4. address — место проживания ученика ('U' - в городе, 'R' - за городом);
-5. famsize — размер семьи('LE3' - до 3 человек, 'GT3' - более трех человек);
-6. Pstatus — статус совместного жилья родителей ('T' - живут вместе 'A' - живут раздельно);
-7. Medu — образование матери (0 - нет, 1 - 4 класса, 2 - от 5 до 9 классов, 3 - среднее специальное или 11 классов, 4 - высшее);
-8. Fedu — образование отца (0 - нет, 1 - 4 класса, 2 - от 5 до 9 классов, 3 - среднее специальное или 11 классов, 4 - высшее);
-9. Mjob — работа матери ('teacher' - учитель, 'health' - сфера здравоохранения, 'services' - гос. служба, 'at_home' - не работает, 'other' - другое);
-10. Fjob — работа отца ('teacher' - учитель, 'health' - сфера здравоохранения, 'services' - гос. служба, 'at_home' - не работает, 'other' - другое);
-11. reason — причина выбора школы ('home' - близость к дому, 'reputation' - репутация школы, 'course' - образовательная программа, 'other' - другое);
-12. guardian — опекун ('mother' - мать, 'father' - отец, 'other' - другое);
-13. traveltime — время в пути до школы (1 - менее 15 мин, 2 - 15-30 мин, 3 - 30-60 мин, 4 - более 60 мин);
-14. studytime — время на учёбу помимо школы в неделю (1 - менее 2 ч, 2 - 2-5 ч, 3 - 5-10 ч, 4 - более 10 ч);
-15. failures — количество внеучебных неудач (n, если 0 <= n <= 3, иначе 4);
-16. schoolsup — дополнительная образовательная поддержка школы (yes или no);
-17. famsup — семейная образовательная поддержка (yes или no);
-18. paid — дополнительные платные занятия по математике (yes или no);
-19. activities — дополнительные внеучебные занятия (yes или no);
-20. nursery — посещал детский сад (yes или no);
-21. Gstudytime — studytime, granular;
-22. higher — желание получить высшее образование (yes или no);
-23. internet — наличие интернета дома (yes или no);
-24. romantic — в романтических отношениях (yes или no);
-25. famrel — семейные отношения (от 1 - очень плохо до 5 - очень хорошо);
-26. freetime — свободное время после школы (от 1 - очень мало до 5 - очень много);
-27. goout — проведение времени с друзьями (от 1 - очень мало до 5 - очень много);
-28. health — текущее состояние здоровья (от 1 - очень плохо до 5 - очень хорошо);
-29. absences — количество пропущенных занятий;
-30. score — баллы по госэкзамену по математике.
+1. school — the abbreviation of the student's school;
+2. sex — 'M' - male, 'F' - female;
+3. age — from 15 to 22 ages;
+4. address — student residence ('U' - in a city, 'R' - in the country);
+5. famsize — family size ('LE3' - less then 3 people, 'GT3' - greater then 3 people);
+6. Pstatus — parents' cohabitation status ('T' - live together, 'A' - live separately);
+...
+30. score — mathematics exam scores.
 
 ## Restaurant rating prediction
 **Project Description:** TripAdvisor rating prediction of european restaurants.
