@@ -62,13 +62,6 @@ Dataset features:
 7. decline_app_cnt - number of applications refused in the past;
 8. good_work - good job presence flag;
 9. bki_request_cnt - number of requests to the credit bureaus;
-10. home_address - home address category;
-11. work_address - work address category;
-12. income - borrower's income;
-13. foreign_passport - foreign passport presence flag;
-14. sna - type of communication between a borrower and the bank;
-15. first_time - the age of the availability of information about the borrower;
-16. score_bki - score according to data from the credit bureaus;
-17. region_rating - region rating;
-18. app_date - application date;
+
+...
 19. default - presence of default.
