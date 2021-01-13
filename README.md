@@ -65,3 +65,46 @@ Dataset features:
 
 ...
 19. default - presence of default.
+
+## Car price prediction
+**Project Description:** Prediction of car prices by car's characteristics. There is no training sample with correct answers. It must be found from external sources.
+
+**Goal:** To identify cars whose price is below market.
+
+**Objectives:** Create model to predict car prices.
+
+**Dataset Description:** Dataset consists of 0 rows into train set and 3 637 rows into test set. It is necessary to parse train data from the internet.
+
+Dataset features:
+1. bodyType;
+2. brand;
+3. color;
+4. fuelType;
+5. modelDate;
+6. name - model name;
+7. numberOfDoors;
+8. productionDate;
+9. vehicleConfiguration;
+10. vehicleTransmission;
+11. engineDisplacement;
+12. enginePower;
+13. description;
+14. mileage;
+15. equipment;
+16. drive unit;
+17. left or right;
+18. needed for repair or not;
+19. number of owners;
+20. is passport original or not;
+21. is car cleared or not;
+22. time of car ownership.
+
+## Recommender system
+**Project Description:** Prediction of goods rating for exact user-item pairs.
+
+**Goal:** To recommend the best product for the user.
+
+**Objectives:** Create model to predict goods rating for user-item pairs.
+
+**Dataset Description:** Dataset consists of 857895 rows into train set and 285965 rows into test set.
+
