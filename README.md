@@ -108,3 +108,13 @@ Dataset features:
 
 **Dataset Description:** Dataset consists of 857895 rows into train set and 285965 rows into test set.
 
+## Image classification
+**Project Description:** Car model classification by image.
+
+**Dataset Description:** Dataset consists of 15561 images into train set and 6675 images into test set.
+
+## George image classification
+**Project Description:** Classification of St. George the victorious by image.
+
+**Dataset Description:** Dataset consists of 6047 images into train set.
+
