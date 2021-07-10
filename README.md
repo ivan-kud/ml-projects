@@ -1,6 +1,6 @@
 # My DataScience Projects
 
-Here you can see my projects of DataScience.
+Here you can see my educational projects of DataScience.
 
 ## Exploratory data analysis
 **Project Description:** You have been invited to participate in one of the projects of UNICEF - an international subdivision of the United Nations whose mission is to improve the well-being of children around the world.
