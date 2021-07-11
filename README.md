@@ -24,7 +24,7 @@ Service is available [here](https://person-segmentation-j6ql7uq6xa-ez.a.run.app/
 4. MLP model implementation for tabular data.
 5. NLP model implementation for text data.
 6. CV model implementation for image data.
-7. NN model implementation for tabular, text and image data based on MLP, NLP and CV models.
+7. Multi-input NN model implementation (tabular + NLP + CV).
 
 ## Image classification
 **Description:** Pretrained EfficientNet model to classify car model by image. Dataset consists of 15561 images into train set and 6675 images into test set.
