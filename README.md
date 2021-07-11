@@ -12,7 +12,7 @@ Service is available [here](https://person-segmentation-j6ql7uq6xa-ez.a.run.app/
 4. Web framework: FastAPI;
 5. Cloud service: Google Cloud Platform. 
 
-## Car price prediction. Part 2
+## Car price prediction. Case 2
 **Description:** Prediction of car price by it's characteristics, description and image. Dataset consists of tabular data (6682 rows into train set and 1671 rows into test set) and images.
 
 **Goal:** To identify cars whose price is below market.
@@ -33,11 +33,11 @@ Service is available [here](https://person-segmentation-j6ql7uq6xa-ez.a.run.app/
 **Description:** Classification of Saint George the Victorious by image.
 
 ## Recommender system
-**Description:** Model based on LightFM library is used to predict goods rating for user-item pairs. Dataset consists of 857895 rows into train set and 285965 rows into test set.
+**Description:** Collaborative filtering model to predict goods rating for user-item pairs. Dataset consists of 857895 rows into train set and 285965 rows into test set.
 
 **Goal:** To recommend the best product for the user.
 
-## Car price prediction. Part 1
+## Car price prediction. Case 1
 **Description:**  Prediction of car prices by their characteristics. There is no training sample with correct answers. It must be found from external sources. The model is a stack of RandomForestRegressor and GradientBoostingRegressor with LinearRegressor meta-model.
 
 **Goal:** To identify cars whose price is below market.
