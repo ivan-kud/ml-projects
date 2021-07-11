@@ -1,0 +1,10 @@
+matplotlib
+pillow
+
+fastapi
+uvicorn
+python-multipart
+aiofiles
+
+mxnet
+gluoncv
