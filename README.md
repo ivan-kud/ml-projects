@@ -3,14 +3,15 @@ Here you can see my educational projects of DataScience.
 ## Person segmentation service
 This is my instance segmentation service basen on MaskRCNN model trained on COCO dataset for person class only.
 
-Service is available [here](https://person-segmentation-j6ql7uq6xa-ez.a.run.app/predict). On the page you should choose image file with persons and press 'Submit' button. After awhile you'll see segmented image.
-
 **Technical description:**
 1. Model: MaskRCNN based on resnet101;
 2. Training dataset: COCO-2017;
 3. Library: GluonCV;
 4. Web framework: FastAPI;
 5. Cloud service: Google Cloud Platform. 
+
+## Hierarchical classification
+**Description:** A lot of new products arrive in the marketplace every day and each of them must be assigned to a specific category in the category tree (there are more than 1000 categories). It takes a lot of effort and time, so I want to learn how to predict a category based on the names and parameters of products.
 
 ## Car price prediction. Case 2
 **Description:** Prediction of car price by it's characteristics, description and image. Dataset consists of tabular data (6682 rows into train set and 1671 rows into test set) and images.
