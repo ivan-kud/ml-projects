@@ -1,8 +1,14 @@
-hiclass
-scikit-learn
-matplotlib
-nltk
-pymorphy2
-missingno
-pyarrow
-pygraphviz
+hiclass==3.0.3
+joblib==1.1.0
+matplotlib==3.5.1
+missingno==0.4.2
+networkx==2.7.1
+nltk==3.6.7
+numpy==1.21.5
+pandas==1.4.2
+pyarrow==5.0.0
+pygraphviz==1.9	1.7
+pymorphy2==0.9.1
+scikit-learn==1.0.2
+scipy==1.7.3
+tqdm==4.63.0
