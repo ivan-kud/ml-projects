@@ -1,4 +1,4 @@
-# My educational projects of Data Science
+# My works of Machine Learning
 
 ## Hierarchical classification
 A lot of new products arrive in the marketplace every day and each of them must be assigned to a specific category in the category tree (there are more than 1000 categories). It takes a lot of effort and time, so I want to learn how to predict a category based on short description and parameters of products.
