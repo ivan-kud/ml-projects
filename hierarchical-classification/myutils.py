@@ -14,12 +14,6 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
 
-WORKING_PATH = './working/'
-TARGET = 'category_id'  # Target feature name
-TRAIN = 'TRAIN'  # Binary feature to separate train and test data
-PATH_COLS = ['node_1', 'node_2', 'node_3', 'node_4', 'node_5']
-
-
 class Tokenizer:
     """Interface of lemma tokenizer with sklearn"""
 
@@ -39,19 +33,17 @@ class Tokenizer:
         return tokens
 
 
-def get_vectorizer(x, fname, regexp, saving=True):
+def get_vectorizer(x, fname, stopwords_fname, regexp, saving=True):
     """Returns vectorizer from file if it exists.
     Otherwise, this function initializes and fits vectorizer.
     """
-    fname = WORKING_PATH + fname
-
     # If it already exists
     if os.path.isfile(fname):
         # Load vectorizer
         vectorizer = joblib.load(fname)
     else:
         # Read stop words
-        with open(WORKING_PATH + 'stopwords-ru.txt') as f:
+        with open(stopwords_fname) as f:
             stop_words = f.read().splitlines()
 
         # Initialize tokenizer
@@ -73,8 +65,6 @@ def get_vectorizer(x, fname, regexp, saving=True):
 def get_title_vectors(x, fname, vectorizer, saving=True):
     """Returns vectorized 'title' column"""
 
-    fname = WORKING_PATH + fname
-
     # If it already exists
     if os.path.isfile(fname):
         # Load 'title' vectors
@@ -92,8 +82,6 @@ def get_title_vectors(x, fname, vectorizer, saving=True):
 
 def get_prediction(X, fname, classifier, saving=True):
     """Returns prediction"""
-
-    fname = WORKING_PATH + fname
 
     # If it already exists
     if os.path.isfile(fname):
@@ -115,8 +103,6 @@ def get_classifier(X, y, fname, model_type, n_estimators, random_state,
     """Returns LCPN classifier from file if it exists.
     Otherwise, this function initializes and fits classifier.
     """
-    fname = WORKING_PATH + fname
-
     # If it already exists
     if os.path.isfile(fname):
         # Load classifier
@@ -149,17 +135,18 @@ def get_classifier(X, y, fname, model_type, n_estimators, random_state,
     return clf
 
 
-def split_scale_df(df, validation_size, random_state, stratify=False):
+def split_scale_df(df, train, target, path_cols,
+                   validation_size, random_state, stratify=False):
     """Splits and scale DataFrame"""
 
     # Split data: Х - features, у - target variable
-    X = df.loc[df[TRAIN]].drop([TRAIN, TARGET] + PATH_COLS, axis=1)
-    X_test = df.loc[~df[TRAIN]].drop([TRAIN, TARGET] + PATH_COLS, axis=1)
-    y = df.loc[df[TRAIN], PATH_COLS].astype(int).values
-    indices = df.loc[df[TRAIN]].index
+    X = df.loc[df[train]].drop([train, target] + path_cols, axis=1)
+    X_test = df.loc[~df[train]].drop([train, target] + path_cols, axis=1)
+    y = df.loc[df[train], path_cols].astype(int).values
+    indices = df.loc[df[train]].index
 
     # Split data on train and validation parts
-    strat = df.loc[df[TRAIN], TARGET] if stratify else None
+    strat = df.loc[df[train], target] if stratify else None
     (X_train, X_valid, y_train, y_valid,
      indices_train, indices_valid) = train_test_split(
         X, y, indices, test_size=validation_size, stratify=strat,

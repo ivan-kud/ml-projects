@@ -26,17 +26,17 @@ Below is the comparative results for various models and parameters. The metric i
 * LCPN, 3-symbol vectorizer, 20 estimators
 
     * train whF: 0.99929
-    * valid whF: 0.95803
+    * valid whF: 0.95954
 
 * LCPN, 3-symbol vectorizer, 1200 estimators
 
     * train whF: 1.00000
-    * valid whF: 0.96115
+    * valid whF: 0.96215
 
 * LCPN, 2-symbol vectorizer, 20 estimators
 
     * train whF: 0.99932
-    * valid whF: 0.95747
+    * valid whF: 0.95847
 
 * LCN, 3-symbol vectorizer, 20 estimators
 
@@ -62,11 +62,11 @@ Below is the comparative results for various models and parameters. The metric i
 
 To improve the results, we can also use:
 * 'short_description' and 'name_value_characteristics' features
-* More complicated regular expressions for vectorizer
+* Other approaches for vectorization
 * Feature selection
 * Hyperparameters tuning
 * Various base estimators for LCN and LCPN
-* Unique base estimators for each hierarchy level or for each node
+* Unique estimators for each hierarchy level or for each node
 * Error analysis
 
 ## References
