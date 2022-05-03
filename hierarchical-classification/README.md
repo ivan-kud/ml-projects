@@ -64,7 +64,7 @@ To improve the results, we can also use:
 * 'short_description' and 'name_value_characteristics' features
 * Other approaches for vectorization
 * Feature selection
-* Hyperparameters tuning
+* Hyperparameter tuning
 * Various base estimators for LCN and LCPN
 * Unique estimators for each hierarchy level or for each node
 * Error analysis
