@@ -1,8 +1,1 @@
-matplotlib
 pillow
-
-python-multipart
-aiofiles
-
-mxnet
-gluoncv
