@@ -53,11 +53,9 @@ async def root():
 
 @app.get('/predict', response_class=HTMLResponse)
 async def get_image():
-    return '''
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <button type="submit">Submit</button>
-        </form>'''
+    with open('html-sources/predict.html', 'r') as file:
+        html = file.read()
+    return html
 
 
 # @app.post('/predict')
