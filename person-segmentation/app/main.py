@@ -1,19 +1,45 @@
-# import io
-
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse
+from torchvision.models import resnet50, ResNet50_Weights
 # from PIL import Image
 
 
 # Define the FastAPI app
 app = FastAPI()
 
-# # Load pretrained model
-# model = gluoncv.model_zoo.get_model('mask_rcnn_fpn_resnet101_v1d_coco',
-#                                     pretrained=True, root='./models')
+# Initialize weights, transforms and model
+weights = ResNet50_Weights.DEFAULT
+preprocess_image = weights.transforms()
+model = resnet50(weights=weights)
 
 
-# def process_image(img_mx_array, model, thresh=0.5):
+@app.get('/')
+async def root():
+    return "WELCOME. Go to /docs or /predict or send post request to /predict"
+
+
+@app.get('/predict', response_class=HTMLResponse)
+async def get_image():
+    with open('html-sources/predict.html', 'r', encoding='utf-8') as file:
+        html = file.read()
+    return html
+
+
+@app.post('/predict')
+async def predict(file: UploadFile = File(...)):
+    # Read image
+    img = None  # FIXME
+
+    # Preprocess the input image
+    img_transformed = preprocess_image(img)
+
+    # Set model to eval mode
+    model.eval()
+
+    return FileResponse('image.png', media_type='image/png')
+
+
+# def preprocess_image(img_mx_array, model, thresh=0.5):
 #     # Preprocess an image
 #     img_mx_array, img_np_array = gluoncv.data.transforms.presets.rcnn.transform_test(img_mx_array)
 #
@@ -44,33 +70,6 @@ app = FastAPI()
 #                                      model.classes, ax=ax, linewidth=2.0, fontsize=8)
 #
 #     fig.savefig('image.png')
-
-
-@app.get('/')
-async def root():
-    return "WELCOME. Go to /docs or /predict or send post request to /predict"
-
-
-@app.get('/predict', response_class=HTMLResponse)
-async def get_image():
-    with open('html-sources/predict.html', 'r') as file:
-        html = file.read()
-    return html
-
-
-# @app.post('/predict')
-# async def predict(file: UploadFile = File(...)):
-#     # Convert file to mxnet array
-#     file_contents = await file.read()
-#     stream = io.BytesIO(file_contents)
-#     pil_image = Image.open(stream)
-#     mxnet_array = mxnet.nd.array(pil_image)
-#
-#     process_image(mxnet_array, model, 0.5)
-#
-#     return FileResponse('image.png', media_type='image/png')
-
-
 
 
     # Save UploadFile object to image file on disk
