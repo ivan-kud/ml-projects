@@ -1,42 +1,51 @@
-from fastapi import FastAPI, File, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse
-from torchvision.models import resnet50, ResNet50_Weights
+import base64
+
+from fastapi import FastAPI, Request, Form, File, UploadFile
+from fastapi.responses import HTMLResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+# from torchvision.models import resnet50, ResNet50_Weights
 # from PIL import Image
 
 
-# Define the FastAPI app
 app = FastAPI()
 
+templates = Jinja2Templates(directory="app/templates")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
 # Initialize weights, transforms and model
-weights = ResNet50_Weights.DEFAULT
-preprocess_image = weights.transforms()
-model = resnet50(weights=weights)
+# weights = ResNet50_Weights.DEFAULT
+# preprocess_image = weights.transforms()
+# model = resnet50(weights=weights)
 
 
-@app.get('/')
-async def root():
-    return "WELCOME. Go to /docs or /predict or send post request to /predict"
+@app.get('/', response_class=HTMLResponse)
+def read_home(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get('/predict', response_class=HTMLResponse)
-async def get_image():
-    with open('html-sources/predict.html', 'r', encoding='utf-8') as file:
-        html = file.read()
-    return html
-
-
-@app.post('/predict')
-async def predict(file: UploadFile = File(...)):
-    # Read image
-    img = None  # FIXME
-
-    # Preprocess the input image
-    img_transformed = preprocess_image(img)
-
-    # Set model to eval mode
-    model.eval()
+@app.post('/')
+def predict(img: str = Form()):
+    img = img.split(';base64,')[1]
+    img = base64.b64decode(img)
+    with open('image.png', 'wb') as f:
+        f.write(img)
 
     return FileResponse('image.png', media_type='image/png')
+
+
+# @app.post('/')
+# async def predict(file: UploadFile):
+#     # Read image
+#     img = None  # FIXME
+#
+#     # Preprocess the input image
+#     img_transformed = preprocess_image(img)
+#
+#     # Set model to eval mode
+#     model.eval()
+#
+#     return FileResponse('image.png', media_type='image/png')
 
 
 # def preprocess_image(img_mx_array, model, thresh=0.5):
@@ -70,13 +79,3 @@ async def predict(file: UploadFile = File(...)):
 #                                      model.classes, ax=ax, linewidth=2.0, fontsize=8)
 #
 #     fig.savefig('image.png')
-
-
-    # Save UploadFile object to image file on disk
-    # with open('image.jpg', 'wb') as buffer:
-    #     shutil.copyfileobj(file.file, buffer)
-
-    # Convert numpy array to stream
-    # pil_image = Image.fromarray(out_img_np_array)
-    # stream = io.BytesIO()
-    # pil_image.save(stream, format="JPEG")

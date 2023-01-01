@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit prediction</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/images/favicon.ico') }}">
+<!--    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/styles.css') }}">-->
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <canvas id="canvas" width="400" height="400" style="border: 1px solid #000000;"></canvas>
+        <br>
+        <form id="myForm" method="post">
+            <input type="hidden" id="image" name="img">
+            <input type="button" value="Clear" style="width: 10em;" onclick="clearCanvas()">
+            <input type="button" value="Submit" style="width: 10em;" onclick="submitCanvas()">
+        </form>
+    </div>
+    <p id="message"></p>
+    <script src="{{ url_for('static', path='/js/index.js') }}"></script>
+</body>
+
+</html>
