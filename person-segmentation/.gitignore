@@ -1,7 +1,0 @@
-.idea
-.theia
-__pycache__
-app/__pycache__
-app/model
-venv
-image.png

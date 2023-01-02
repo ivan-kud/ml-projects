@@ -1,7 +1,0 @@
-fastapi>=0.88.0,<0.89.0
-uvicorn[standard]
-# gunicorn
-# aiofiles
-python-multipart
-jinja2
-torchvision>=0.14.0,<0.15.0
