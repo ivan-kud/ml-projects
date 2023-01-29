@@ -12,5 +12,5 @@ A lot of new products arrive in the marketplace every day and each of them must 
 3. Dataset: 354316 instances;
 4. Libraries: hiclass, scikit-learn, networkx.
 
-## Other notebooks
-Some other notebooks are in the corresponding folder.
+## Some notebooks
+Notebooks from SkillFactory course and test tasks.
