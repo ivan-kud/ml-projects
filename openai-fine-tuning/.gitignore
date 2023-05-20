@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+__pycache__
+*.pyc
+/venv
+/OPENAI_API_KEY.txt
+/dataset.csv
+/tokenized_dataset.jsonl
