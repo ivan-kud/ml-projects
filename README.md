@@ -1,5 +1,8 @@
 # My works of Machine Learning
 
+## Fine-tuning of OpenAI model
+OpenAI provides the ability to fine-tune their base models in order to adapt them to a specific task. Here I implemented fine-tuning of the "ada" base model for binary text classification task.
+
 ## Text classification with catboost and fastText
 Binary classification problem: to determine if there is contact information in the advertisement.
 
