@@ -10,5 +10,5 @@ pyarrow==5.0.0
 pygraphviz==1.9
 pymorphy2==0.9.1
 scikit-learn==1.0.2
-scipy==1.7.3
+scipy==1.10.0
 tqdm==4.63.0
