@@ -1,0 +1,17 @@
+fastapi
+pydantic
+uvicorn[standard]
+aiofiles
+python-multipart
+jinja2
+Pillow==10.0.1
+numpy==1.26.0
+opencv-python
+torch
+torchvision
+datasets==2.14.5
+transformers==4.33.2
+faiss-cpu
+catboost==1.2.1.1
+pandas
+scikit-learn

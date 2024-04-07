@@ -1,0 +1,40 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}Image Search{% endblock %}
+
+{% block header %}<h1>Search for Similar Images</h1>{% endblock %}
+
+{% block page_content %}
+<form id="myForm" method="post" enctype="multipart/form-data">
+    <h4>1. Select a model</h4>
+    <label for="model">Model:</label>
+    <select name="model" id="model">
+        {% if model is not defined %}{% set model = "clip" %}{% endif %}
+        <option value="clip" {% if model == "clip" %}selected{% endif %}>CLIP</option>
+        <option value="blip" {% if model == "blip" %}selected{% endif %}>BLIP</option>
+        <option value="color" {% if model == "color" %}selected{% endif %}>Base Color Search</option>
+    </select>
+    <br>
+    <h4>2. Upload an image to search</h4>
+    <input type="file" id="fileBtn" name="file" accept="image/png, image/jpeg">
+    <br>
+    <br>
+    <input type="button" id="submitBtn" value="Submit" onclick="submitForm()">
+    <h4>3. Get the result</h4>
+    <p class="output" id="info">{{ info }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="time1">{{ time1 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="time2">{{ time2 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="time3">{{ time3 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="time4">{{ time4 }}&nbsp</p>
+    {% if image is defined %}
+    <img src="{{ image }}" alt="Similar images" style="max-width:100%;">
+    {% endif %}
+</form>
+<br>
+<hr>
+<p class="details"><b>Technical details</b></p>
+<p class="details">Here I used pretrained CLIP and BLIP models from Hugging Face.</p>
+<p class="details">Searching by base colors may be useful for fast image filtering.</p>
+{% endblock %}
+
+{% block scripts %}<script src="/static/js/search.js"></script>{% endblock %}

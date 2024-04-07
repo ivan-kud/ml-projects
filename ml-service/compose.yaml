@@ -1,0 +1,67 @@
+services:
+  fastapi:
+    build: .
+    restart: unless-stopped
+#    ports: # for local deployment
+#      - "80:80" # for local deployment
+    networks:
+      - traefik-public
+    labels:
+      - traefik.enable=true
+      - traefik.http.services.app.loadbalancer.server.port=80
+      - traefik.http.routers.app-http.entrypoints=http
+      - traefik.http.routers.app-http.rule=Host(`ivankud.com`)
+      - traefik.docker.network=traefik-public
+      - traefik.http.routers.app-https.entrypoints=https
+      - traefik.http.routers.app-https.rule=Host(`ivankud.com`)
+      - traefik.http.routers.app-https.tls=true
+      - traefik.http.routers.app-https.tls.certresolver=le
+      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+      - traefik.http.routers.app-http.middlewares=https-redirect
+
+  traefik:
+    image: traefik:v2.3
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - traefik-public
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-public-certificates:/certificates
+    labels:
+      - traefik.enable=true
+      - traefik.http.services.traefik-dashboard.loadbalancer.server.port=8080
+      - traefik.http.routers.traefik-dashboard-http.entrypoints=http
+      - traefik.http.routers.traefik-dashboard-http.rule=Host(`traefik.ivankud.com`)
+      - traefik.docker.network=traefik-public
+      - traefik.http.routers.traefik-dashboard-https.entrypoints=https
+      - traefik.http.routers.traefik-dashboard-https.rule=Host(`traefik.ivankud.com`)
+      - traefik.http.routers.traefik-dashboard-https.tls=true
+      - traefik.http.routers.traefik-dashboard-https.tls.certresolver=le
+      - traefik.http.routers.traefik-dashboard-https.service=api@internal
+      - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+      - traefik.http.routers.traefik-dashboard-http.middlewares=https-redirect
+      - traefik.http.middlewares.admin-auth.basicauth.users=${TRAEFIK_USERNAME?Variable not set}:${TRAEFIK_HASHED_PASSWORD?Variable not set}
+      - traefik.http.routers.traefik-dashboard-https.middlewares=admin-auth
+    command:
+      - --providers.docker
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.http.address=:80
+      - --entrypoints.https.address=:443
+      - --certificatesresolvers.le.acme.email=ivan.kudashkin@gmail.com
+      - --certificatesresolvers.le.acme.storage=/certificates/acme.json
+      - --certificatesresolvers.le.acme.tlschallenge=true
+      - --accesslog
+      - --log
+      - --api
+
+volumes:
+  traefik-public-certificates:
+
+networks:
+  traefik-public:
+    external: true  # false for local deployment

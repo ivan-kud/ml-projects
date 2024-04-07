@@ -1,0 +1,545 @@
+{
+  "builder_name": "imagefolder",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "imagefolder",
+  "dataset_size": 9104,
+  "description": "",
+  "download_checksums": {
+    "/kaggle/input/coco128/coco128/images/train2017/000000000009.jpg": {
+      "num_bytes": 62835,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000025.jpg": {
+      "num_bytes": 89652,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000030.jpg": {
+      "num_bytes": 30089,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000034.jpg": {
+      "num_bytes": 105097,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000036.jpg": {
+      "num_bytes": 66757,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000042.jpg": {
+      "num_bytes": 56556,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000049.jpg": {
+      "num_bytes": 40899,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000061.jpg": {
+      "num_bytes": 135566,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000064.jpg": {
+      "num_bytes": 59706,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000071.jpg": {
+      "num_bytes": 57039,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000072.jpg": {
+      "num_bytes": 83098,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000073.jpg": {
+      "num_bytes": 124117,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000074.jpg": {
+      "num_bytes": 47165,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000077.jpg": {
+      "num_bytes": 50183,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000078.jpg": {
+      "num_bytes": 73636,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000081.jpg": {
+      "num_bytes": 23700,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000086.jpg": {
+      "num_bytes": 87717,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000089.jpg": {
+      "num_bytes": 41759,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000092.jpg": {
+      "num_bytes": 29143,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000094.jpg": {
+      "num_bytes": 66547,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000109.jpg": {
+      "num_bytes": 62103,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000110.jpg": {
+      "num_bytes": 56509,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000113.jpg": {
+      "num_bytes": 55067,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000127.jpg": {
+      "num_bytes": 64488,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000133.jpg": {
+      "num_bytes": 40373,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000136.jpg": {
+      "num_bytes": 31511,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000138.jpg": {
+      "num_bytes": 73743,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000142.jpg": {
+      "num_bytes": 43512,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000143.jpg": {
+      "num_bytes": 30392,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000144.jpg": {
+      "num_bytes": 117593,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000149.jpg": {
+      "num_bytes": 29226,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000151.jpg": {
+      "num_bytes": 107259,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000154.jpg": {
+      "num_bytes": 63228,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000164.jpg": {
+      "num_bytes": 40901,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000165.jpg": {
+      "num_bytes": 64301,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000192.jpg": {
+      "num_bytes": 62642,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000194.jpg": {
+      "num_bytes": 52676,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000196.jpg": {
+      "num_bytes": 70172,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000201.jpg": {
+      "num_bytes": 52369,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000208.jpg": {
+      "num_bytes": 41630,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000241.jpg": {
+      "num_bytes": 48024,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000247.jpg": {
+      "num_bytes": 48428,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000250.jpg": {
+      "num_bytes": 49998,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000257.jpg": {
+      "num_bytes": 60297,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000260.jpg": {
+      "num_bytes": 26982,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000263.jpg": {
+      "num_bytes": 55292,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000283.jpg": {
+      "num_bytes": 35093,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000294.jpg": {
+      "num_bytes": 33028,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000307.jpg": {
+      "num_bytes": 96160,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000308.jpg": {
+      "num_bytes": 60331,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000309.jpg": {
+      "num_bytes": 114443,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000312.jpg": {
+      "num_bytes": 91689,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000315.jpg": {
+      "num_bytes": 54518,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000321.jpg": {
+      "num_bytes": 45914,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000322.jpg": {
+      "num_bytes": 35865,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000326.jpg": {
+      "num_bytes": 22412,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000328.jpg": {
+      "num_bytes": 66986,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000332.jpg": {
+      "num_bytes": 48907,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000338.jpg": {
+      "num_bytes": 36236,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000349.jpg": {
+      "num_bytes": 33736,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000357.jpg": {
+      "num_bytes": 26957,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000359.jpg": {
+      "num_bytes": 18860,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000360.jpg": {
+      "num_bytes": 35980,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000368.jpg": {
+      "num_bytes": 116152,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000370.jpg": {
+      "num_bytes": 36164,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000382.jpg": {
+      "num_bytes": 33310,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000384.jpg": {
+      "num_bytes": 27793,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000387.jpg": {
+      "num_bytes": 53134,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000389.jpg": {
+      "num_bytes": 51895,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000394.jpg": {
+      "num_bytes": 68453,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000395.jpg": {
+      "num_bytes": 55487,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000397.jpg": {
+      "num_bytes": 56346,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000400.jpg": {
+      "num_bytes": 63846,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000404.jpg": {
+      "num_bytes": 41249,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000415.jpg": {
+      "num_bytes": 28284,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000419.jpg": {
+      "num_bytes": 67866,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000428.jpg": {
+      "num_bytes": 22969,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000431.jpg": {
+      "num_bytes": 43550,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000436.jpg": {
+      "num_bytes": 32998,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000438.jpg": {
+      "num_bytes": 58374,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000443.jpg": {
+      "num_bytes": 37330,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000446.jpg": {
+      "num_bytes": 36624,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000450.jpg": {
+      "num_bytes": 49942,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000459.jpg": {
+      "num_bytes": 36307,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000471.jpg": {
+      "num_bytes": 33837,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000472.jpg": {
+      "num_bytes": 9286,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000474.jpg": {
+      "num_bytes": 37728,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000486.jpg": {
+      "num_bytes": 57241,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000488.jpg": {
+      "num_bytes": 48780,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000490.jpg": {
+      "num_bytes": 26278,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000491.jpg": {
+      "num_bytes": 27309,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000502.jpg": {
+      "num_bytes": 82455,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000508.jpg": {
+      "num_bytes": 36527,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000510.jpg": {
+      "num_bytes": 76888,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000514.jpg": {
+      "num_bytes": 30781,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000520.jpg": {
+      "num_bytes": 50302,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000529.jpg": {
+      "num_bytes": 61674,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000531.jpg": {
+      "num_bytes": 33369,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000532.jpg": {
+      "num_bytes": 68045,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000536.jpg": {
+      "num_bytes": 19624,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000540.jpg": {
+      "num_bytes": 73559,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000542.jpg": {
+      "num_bytes": 50365,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000544.jpg": {
+      "num_bytes": 92299,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000560.jpg": {
+      "num_bytes": 42878,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000562.jpg": {
+      "num_bytes": 14565,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000564.jpg": {
+      "num_bytes": 46726,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000569.jpg": {
+      "num_bytes": 55042,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000572.jpg": {
+      "num_bytes": 34991,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000575.jpg": {
+      "num_bytes": 163333,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000581.jpg": {
+      "num_bytes": 45065,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000584.jpg": {
+      "num_bytes": 48307,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000589.jpg": {
+      "num_bytes": 36369,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000590.jpg": {
+      "num_bytes": 41324,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000595.jpg": {
+      "num_bytes": 91739,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000597.jpg": {
+      "num_bytes": 31374,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000599.jpg": {
+      "num_bytes": 57584,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000605.jpg": {
+      "num_bytes": 85596,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000612.jpg": {
+      "num_bytes": 78481,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000620.jpg": {
+      "num_bytes": 51808,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000623.jpg": {
+      "num_bytes": 30476,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000625.jpg": {
+      "num_bytes": 75952,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000626.jpg": {
+      "num_bytes": 38403,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000629.jpg": {
+      "num_bytes": 77526,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000634.jpg": {
+      "num_bytes": 36504,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000636.jpg": {
+      "num_bytes": 46706,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000641.jpg": {
+      "num_bytes": 63438,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000643.jpg": {
+      "num_bytes": 31400,
+      "checksum": null
+    },
+    "/kaggle/input/coco128/coco128/images/train2017/000000000650.jpg": {
+      "num_bytes": 33865,
+      "checksum": null
+    }
+  },
+  "download_size": 6930964,
+  "features": {
+    "image": {
+      "_type": "Image"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 6940068,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 9104,
+      "num_examples": 128,
+      "dataset_name": "imagefolder"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

@@ -1,0 +1,42 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}Digit Classification{% endblock %}
+
+{% block header %}<h1>Classification of Handwritten Digit</h1>{% endblock %}
+
+{% block page_content %}
+<form id="myForm" method="post">
+    <h4>1. Select a model</h4>
+    <label for="model">Model:</label>
+    <select name="model" id="model">
+        {% if model is not defined %}{% set model = "conv5" %}{% endif %}
+        <option value="logreg" {% if model == "logreg" %}selected{% endif %}>Logistic Regression</option>
+        <option value="dense3" {% if model == "dense3" %}selected{% endif %}>Dense (3 layers)</option>
+        <option value="conv3" {% if model == "conv3" %}selected{% endif %}>Convolutional (3 layers)</option>
+        <option value="conv5" {% if model == "conv5" %}selected{% endif %}>Convolutional (5 layers)</option>
+        <option value="all" {% if model == "all" %}selected{% endif %}>All models</option>
+    </select>
+    <br>
+    <h4>2. Draw a digit and submit</h4>
+    <canvas id="canvas" width="28" height="28" style="border: 1px solid #000; background:#fff; width:100%; max-width:420px; aspect-ratio: 1 / 1; cursor:crosshair;"></canvas>
+    <br>
+    <input type="hidden" id="image" name="image" value="{{ image }}">
+    <input type="button" id="clearBtn" value="Clear" onclick="clearCanvas()" style="width:10em;">
+    <input type="button" id="submitBtn" value="Submit" onclick="submitForm()" style="width:10em;">
+    <h4>3. Get the result</h4>
+    <p class="output" id="output1">{{ output1 }}&nbsp</p>
+    <p class="output" id="output2">{{ output2 }}&nbsp</p>
+</form>
+<br>
+<hr>
+<p class="details"><b>Technical details</b></p>
+<p class="details">The models were trained on MNIST dataset using PyTorch library.</p>
+<ul class="details">
+    <li style="white-space:pre-wrap;">Logistic Regression model:      1 FC layer;   7.8e3 parameters; validation accuracy 90.18&nbsp%</li>
+    <li style="white-space:pre-wrap;">Dense model:                    3 FC layers;  5.0e4 parameters; validation accuracy 97.35&nbsp%</li>
+    <li style="white-space:pre-wrap;">Convolutional (3 layers) model: 2 Conv, 1 FC; 5.0e4 parameters; validation accuracy 99.04&nbsp%</li>
+    <li style="white-space:pre-wrap;">Convolutional (5 layers) model: 4 Conv, 1 FC; 5.2e4 parameters; validation accuracy 99.34&nbsp%</li>
+</ul>
+{% endblock %}
+
+{% block scripts %}<script src="/static/js/digit.js"></script>{% endblock %}

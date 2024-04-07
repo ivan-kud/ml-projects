@@ -1,0 +1,13 @@
+.vscode
+.theia
+.DS_Store
+.ipynb_checkpoints
+.venv/
+__pycache__
+*.pyc
+/certificates
+/model-training/digit-data
+/model-training/sentiment-data
+/tmp.py
+/tmp.ipynb
+/app/ml-models/mask-rcnn-coco/frozen_inference_graph.pb

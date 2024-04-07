@@ -1,0 +1,43 @@
+{% extends 'shared/base.html' %}
+
+{% block title %}Text Suggestions{% endblock %}
+
+{% block header %}<h1>Text Replacement Suggestions</h1>{% endblock %}
+
+{% block page_content %}
+<form id="myForm" method="post">
+    <h4>1. Write a text with special terms in English</h4>
+    <textarea id="text" name="text" maxlength="1000" cols="50" rows="15" style="max-width:100%;">{{ text }}</textarea>
+    <br>
+    <br>
+    <input type="button" id="submitBtn" value="Submit" onclick="submitForm()" style="width: 10em;">
+    <h4>2. Get the result</h4>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output1">{{ output1 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output2">{{ output2 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output3">{{ output3 }}&nbsp</p>
+    <br>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output4">{{ output4 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output5">{{ output5 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output6">{{ output6 }}&nbsp</p>
+    <br>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output7">{{ output7 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output8">{{ output8 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output9">{{ output9 }}&nbsp</p>
+    <br>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output10">{{ output10 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output11">{{ output11 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output12">{{ output12 }}&nbsp</p>
+    <br>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output13">{{ output13 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output14">{{ output14 }}&nbsp</p>
+    <p class="output" style="white-space:pre-wrap; margin:0;" id="output15">{{ output15 }}&nbsp</p>
+    <br>
+    <p class="output" id="info">{{ info }}&nbsp</p>
+</form>
+<br>
+<hr>
+<p class="details"><b>Technical details</b></p>
+<p class="details">Here I used 'roberta-base' model from Hugging Face.</p>
+{% endblock %}
+
+{% block scripts %}<script src="/static/js/suggestion.js"></script>{% endblock %}

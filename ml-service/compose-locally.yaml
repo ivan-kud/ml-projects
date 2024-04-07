@@ -1,0 +1,8 @@
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile-locally
+    image: ivankud/ml-service
+    ports:
+      - "80:80"
