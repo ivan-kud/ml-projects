@@ -1,6 +1,6 @@
 # My works of Machine Learning
 
-## Service with some ML models
+## Web service with some ML models
 
 The service where you could apply machine learning models to solve some problems, such as:
 
